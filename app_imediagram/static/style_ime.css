@@ -1,0 +1,361 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    color: #000;
+    background-image: linear-gradient(45deg, rgb(254, 202, 82),rgb(255, 80, 39),rgb(251, 51, 150), rgb(0, 60, 205));
+    height: 98vh;
+    display: flex ;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+
+.centered-content {
+    transform: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.fonte-titulo {
+    position: absolute;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    top: 10px;
+    /* Ajuste a distância do topo conforme necessário */
+    left: 10px;
+    /* Ajuste a distância da esquerda conforme necessário */
+    /*background-color: #333;*/
+    color: rgb(0, 0, 0);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.form-label {
+    /*aplicar essa formatação a div com fomularios de login*/
+    font-weight: bold;
+    font-size: 22px;
+    text-align: center;
+}
+
+.custom-button {
+    background-color: #006cb4;
+    /* Altere para a cor desejada */
+    color: rgb(255, 255, 255);
+    /* Cor do texto */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.form-input {
+    /*aplicar essa formatação a input de login*/
+    border: 1px solid #ccc;
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    /* Fundo branco com 50% de transparência */
+}
+
+
+
+
+.form-container {
+    /*aplicar essa formatação para deixar centralizado o <div> formularios de login e cadastro*/
+    background-color: rgba(216, 165, 165, 0.5);
+    display: grid;
+    text-align: center;
+    align-items: center;
+    padding: 80px;
+    border-radius: 15px;
+    color: white;
+    overflow: hidden;
+}
+
+
+/*------>Cadastro<--------*/
+
+.sem-sublinhado-Title {
+    text-decoration: none;
+    color: #000000;
+}
+.sem-sublinhado {
+    text-decoration: none;
+    color: #4e0be9;
+}
+
+
+.form-label-cadastro {
+    /*aplicar essa formatação a div com fomularios de cadastro*/
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+}
+
+
+.custom-button-cadastro {
+    background-color: #22a416;
+    /* Altere para a cor desejada */
+    color: white;
+    /* Cor do texto */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+
+
+/*perfil*/
+
+.centered-content-perfil {
+    /*Formatação para o botão enviar do perfil*/
+    position: absolute;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, 0);
+    color: rgb(0, 0, 0)
+}
+
+.form-container-perfil {
+    /* Mantenha a formatação existente */
+    background-color: rgba(154, 148, 148, 0.2);
+    display: grid;
+    border-radius: 15px;
+}
+
+.custom-button-enviar {
+    /*Formatação especifica para o botão enviar do perfil*/
+    background-color: rgb(47, 228, 153);
+    border: none;
+    border-radius: 5px;
+    width: auto;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+.header {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    animation: borderPiscante 2s infinite alternate;
+
+}
+
+.photo-grid {
+    /* z-index: 2 !important;
+    display: grid;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0 -0px; */
+    display: grid;
+    grid-template-columns: repeat(4, minmax(300px, 1fr));
+    grid-gap: 20px
+}
+
+.profile-photo {
+    width: 300px; /* Largura fixa da imagem */
+    height: 200px; /* Altura fixa da imagem */
+    object-fit:scale-down; /* Redimensionar a imagem para preencher a área */
+}
+
+
+.photo-item {
+    /* flex: 0 0 calc(10% - 10%); */
+    /* MUDE 33.33% PARA (25% OU 24%) */
+    margin: 10%;
+    box-sizing: border-box;
+}
+.photo-item .square-image {
+    height: 200px; /* Altura fixa da imagem */
+    width: 200px;
+}
+
+.photo-item .photo-info {
+    padding: 5px; /* Adicione espaçamento interno */
+    text-align: center; /* Centralize o conteúdo */
+}
+
+
+
+
+
+.file-selected-image img {
+    height: 400px;
+    width: 400px;
+    object-fit: scale-down;
+}
+
+
+
+
+
+.info {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 1%;
+}
+
+body {
+    background-color: #000000;
+    color: white;
+
+}
+
+.top-left {
+    margin-left: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.top-right {
+    margin-right: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+h2 {
+    color: white;
+}
+
+.square-image {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    /* padding-bottom: 100%; */
+    width: 100%;
+}
+
+.square-image img {
+
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.upload-btn-container {
+    text-align: center;
+    margin-top: 0.5%;
+}
+
+.upload-btn:hover {
+    background-color: #3A4147;
+}
+
+
+.upload-btn-container {
+    text-align: center;
+}
+
+.upload-btn {
+    background-color: #49535C;
+    /* Cor de fundo do botão */
+    color: white;
+    /* Cor do texto do botão */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 1%;
+    /* Espaço entre o botão e outros elementos */
+}
+
+.file-selected-image {
+    width: 100px;
+    /* Defina a largura desejada para a miniatura */
+    height: 100px;
+    /* Defina a altura desejada para a miniatura */
+    display: none;
+    position: relative;
+    overflow: hidden;
+    /* Adicionado para ocultar partes da imagem que excedam as dimensões do quadrado */
+    margin: 1% auto;
+    /* Espaço entre a miniatura e outros elementos; centraliza horizontalmente */
+}
+
+.mini #thumbnail1 {
+    width: 100px !important;
+    /* A miniatura ocupará a largura total do quadrado */
+    height: 100px !important;
+    /* A miniatura ocupará a altura total do quadrado */
+    max-width: 100%;
+    /* Garante que a imagem não ultrapasse as dimensões do quadrado */
+    max-height: 100%;
+    /* Garante que a imagem não ultrapasse as dimensões do quadrado */
+    object-fit: cover;
+    /* Mantém a proporção da imagem e preenche o espaço do quadrado */
+}
+
+
+.nav{
+    padding: 20px;
+    
+}
+.photo-item p{
+color:#000;
+
+}
+
+
+
+
+
+
+
+/* Estilos para a lightbox */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+}
+
+/* .lightbox-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    color: #fff;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #f1f1f1;
+} */

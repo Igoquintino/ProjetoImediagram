@@ -1,0 +1,71 @@
+
+.header {
+    background-color: #000000; 
+    color: white; 
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.info {
+    background-color: #000000; 
+    color: white; 
+    display: flex;
+    justify-content: space-between;
+    padding: 1%;
+}
+
+body {
+    background-color: #000000; 
+    color: white; 
+
+}
+.top-left {
+    margin-left: 10px; 
+    text-decoration: none;
+}
+
+.top-right {
+    margin-right: 10px; 
+    text-decoration: none;
+}
+
+a {
+    color: white; 
+    text-decoration: none; 
+}
+
+h2 {
+    color: white; 
+}
+
+.photo-grid {
+    list-style: none;
+    padding: 0;
+}
+
+.photo-item {
+    margin: 10px 0; 
+    box-sizing: border-box;
+}
+
+.square-image {
+    width: 50%; 
+    height: auto; 
+    margin: 0 auto;
+}
+
+.square-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+
+
+
+
+
+
+
+
+
