@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_ime.css') }}">
+    <meta charset="UTF-8">
+    <title>
+
+        {% block titulo %}
+        Imediagram :: Homepage
+        {% endblock %}
+
+    </title>
+</head>
+
+<body>
+    
+    {% block body %}
+    <div class="fonte-titulo"><a class="sem-sublinhado-Title">Imediagram</a> </div>
+
+    <div class="centered-content">
+        <form method="POST">
+            {% block formulario %}
+            
+            {{ form.csrf_token }}
+
+            <!-- Início da nova estrutura de grade para centralizar rótulos, inputs e botão -->
+            <div class="form-container">
+                <div class="form-label">Bem-vindo(a) ao Imediagram</div>
+                <br>
+                <label for="email" class="form-label">{{ form.email.label }}</label>
+                <input type="text" name="email" id="email" class="form-input" placeholder="E-mail">
+                <br>
+                <label for="senha" class="form-label">{{ form.senha.label }}</label>
+                <input type="password" name="senha" id="senha" class="form-input" placeholder="Password">
+                <br>
+                {{ form.botao_confirmacao(class="custom-button") }}
+                <br>
+                <a href="{{ url_for('criar_conta') }}" class="sem-sublinhado">Não tem uma conta? Crie aqui</a>
+            </div>
+            <!-- Fim da nova estrutura de grade -->
+            {% endblock %}
+        </form>
+    </div>
+    {% endblock %}
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+<!--<div class="fonte-titulo"><a class="sem-sublinhado" href="{{ url_for( 'feed' ) }}">Imediagram</a> </div>-->

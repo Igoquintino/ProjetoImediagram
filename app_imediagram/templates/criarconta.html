@@ -1,0 +1,35 @@
+{% extends 'homepage.html' %}
+<link rel="stylesheet" href="{{ url_for('static', filename='style_ime.css') }}">
+
+{% block titulo %}
+Criar Conta
+{% endblock titulo %}
+
+{% block formulario %}
+<form method="POST">
+
+    {{ form.csrf_token }}
+    <div class="form-container">
+        <div class="form-label">Bem-vindo(a) ao Imediagram</div>
+        <div class="form-label-cadastro">Faça seu Cadastro</div>
+        <br>
+        <label class="form-label-cadastro">{{ form.username.label() }}</label>
+        {{ form.username(placeholder="Username") }}
+        <br>
+        <label class="form-label-cadastro">{{form.email.label() }}</label>
+        {{ form.email(placeholder="E-mail") }}
+        <br>
+        <label class="form-label-cadastro">{{ form.senha.label() }}</label>
+        {{ form.senha(placeholder="Senha") }}
+        <br>
+
+        <label class="form-label-cadastro">{{ form.confirmacao_senha.label() }}</label>
+        {{ form.confirmacao_senha(placeholder="Senha") }}
+        <br>
+
+        {{ form.botao_confirmacao(class="custom-button-cadastro") }}
+        <br>
+        <a href="{{ url_for('homepage') }}" class="sem-sublinhado">Já tem uma conta? Faça Login</a>
+    </div>
+</form>
+{% endblock formulario %}

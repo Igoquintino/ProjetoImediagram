@@ -1,0 +1,56 @@
+{% extends 'homepage.html' %}
+{% block titulo %}
+Feed :: Imediagram
+{% endblock titulo %}
+
+{%block body%}
+
+<div class="header">
+    <a href="{{ url_for('perfil', id_usuario = current_user.id) }}" class="top-left">Perfil</a>
+    <a href="{{ url_for('logout') }}" class="top-right">Sair</a> 
+</div>
+
+{%block feed%}
+    {% if fotos %}
+        <div class="photo-grid">
+            {% for foto in fotos %}
+            <div class="photo-item">
+                <div class="square-image">
+                    <img id="image" src="{{ url_for('static', filename='fotos_posts/' + foto.imagem) }}" alt="Foto de {{ usuario.username }}">
+                </div>
+                
+                <p>{{ foto.hora_formatada }}</p>
+                     <p>{{ foto.obter_nome_usuario() or 'Usuário Desconhecido' }}</p>
+
+                     <p>{{ usuario.username }}</p>
+                     
+                </div>
+                {% endfor %}
+            </div>
+            {% endif %}
+            {%endblock%}
+{%endblock%}
+            
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="nav">
+    <form method="GET" action="{{ url_for('logout') }}">
+        <button type="submit" class="custom-button-sair"
+            style="position: absolute; top: 10px; right: 10px;">Logout</button>
+    </form>
+    <form method="GET" action="{{ url_for('perfil', id_usuario = current_user.id) }}">
+        <button type="submit" class="custom-button-sair"
+            style="position: absolute; top: 10px; left: 90px;">Perfil</button>
+    </form>
+</div> -->
+
+<!-- <p>{{ foto.data_criacao }}</p> -->
