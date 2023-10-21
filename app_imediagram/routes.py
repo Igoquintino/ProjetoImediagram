@@ -6,6 +6,8 @@ from app_imediagram.forms import FormLogin, FormCriarConta, FormFoto
 from werkzeug.utils import secure_filename
 from flask import request
 import os
+from datetime import datetime
+
 
 @app.route("/", methods=["GET", "POST"])
 def homepage():
